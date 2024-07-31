@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: starWars;
+}
+.footer:hover {
+  background-color: rgb(32, 32, 32);
+}
+@font-face {
+  font-family: starWars;
+  src: url("../assets/Starjedi.ttf");
+}

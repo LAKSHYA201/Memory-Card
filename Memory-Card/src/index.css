@@ -1,0 +1,9 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+#root {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1.5fr 8fr 0.5fr;
+}

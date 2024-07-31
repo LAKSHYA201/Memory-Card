@@ -1,0 +1,16 @@
+.websiteHeader {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #131313, #4600c8);
+  font-family: starWars;
+  letter-spacing: 5px;
+}
+.websiteHeader:hover {
+  background: radial-gradient(circle at center, #131313, #00b62d);
+}
+@font-face {
+  font-family: starWars;
+  src: url(../assets/Starjedi.ttf);
+}
