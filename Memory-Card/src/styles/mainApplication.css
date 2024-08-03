@@ -14,9 +14,12 @@
   border-radius: 15px;
   margin-right: 80px;
   margin-left: 80px;
+  transition-duration: 250ms;
 }
 .card:hover {
   cursor: pointer;
+  transform: scale(1.2);
+  transition-duration: 500ms;
 }
 .cardBack {
   height: 100%;
