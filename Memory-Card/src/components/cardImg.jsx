@@ -1,7 +1,6 @@
 import { useState } from "react";
-export default function CardImg({ cardNo }) {
+export default function CardImg({ cardNo, randomImg }) {
   const [imgSrc, setImgSrc] = useState("");
-
   async function imgFetcher(cardNo) {
     const apiAddress = "https://akabab.github.io/starwars-api/api/id/";
     let completeApiAddress = apiAddress + cardNo + ".json";
