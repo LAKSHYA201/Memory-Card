@@ -1,48 +1,70 @@
+import WebsiteHeader from "../pageLayout/websiteHeader";
 import "../../styles/mainApplication.css";
+import shuffle from "../../helper/shuffler";
 import CardImg from "../cardImg";
+import { useState } from "react";
 
 export default function MainApplication() {
-  function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  }
+  let [currentScore, setCurrentScore] = useState(0);
+  let [bestScore, setBestScore] = useState(0);
+  let [card1Click, setCard1CLick] = useState(0);
+  let [card2Click, setCard2Click] = useState(0);
+  let [card3Click, setCard3Click] = useState(0);
+  let [card4Click, setCard4Click] = useState(0);
+  let [card5Click, setCard5Click] = useState(0);
+  let [card6Click, setCard6Click] = useState(0);
+  let [card7Click, setCard7Click] = useState(0);
+  let [card8Click, setCard8Click] = useState(0);
+  let [card9Click, setCard9Click] = useState(0);
+  let [card10Click, setCard10Click] = useState(0);
+
   let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  shuffleArray(array);
+  shuffle(array);
 
   return (
-    <div className="mainApplication">
-      <div className="card">
-        <CardImg cardNo={1} randomImg={array[0]} />
+    <>
+      <WebsiteHeader />
+      <div className="mainApplication">
+        <div className="card">
+          <CardImg
+            cardNo={array[0]}
+            onClick={() => {
+              if (card1Click == 0) {
+                setCard1CLick(1);
+                setCurrentScore(currentScore++);
+                if (currentScore >= bestScore) setBestScore(currentScore);
+              }
+            }}
+          />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[1]} />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[2]} />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[3]} />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[4]} />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[5]} />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[6]} />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[7]} />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[8]} />
+        </div>
+        <div className="card">
+          <CardImg cardNo={array[9]} />
+        </div>
       </div>
-      <div className="card">
-        <CardImg cardNo={2} randomImg={array[1]} />
-      </div>
-      <div className="card">
-        <CardImg cardNo={3} randomImg={array[2]} />
-      </div>
-      <div className="card">
-        <CardImg cardNo={4} randomImg={array[3]} />
-      </div>
-      <div className="card">
-        <CardImg cardNo={5} crandomImg={array[4]} />
-      </div>
-      <div className="card">
-        <CardImg cardNo={6} randomImg={array[5]} />
-      </div>
-      <div className="card">
-        <CardImg cardNo={7} randomImg={array[6]} />
-      </div>
-      <div className="card">
-        <CardImg cardNo={8} randomImg={array[7]} />
-      </div>
-      <div className="card">
-        <CardImg cardNo={9} randomImg={array[8]} />
-      </div>
-      <div className="card">
-        <CardImg cardNo={10} randomImg={array[9]} />
-      </div>
-    </div>
+    </>
   );
 }

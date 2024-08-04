@@ -1,7 +1,7 @@
 .websiteHeader {
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: radial-gradient(circle at center, #131313, #4600c8);
   font-family: starWars;
@@ -13,4 +13,12 @@
 @font-face {
   font-family: starWars;
   src: url(../assets/Starjedi.ttf);
+}
+.scoreHolder {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15vw;
+}
+h1 {
+  padding-left: 5vw;
 }
