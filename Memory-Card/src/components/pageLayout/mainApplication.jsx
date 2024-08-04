@@ -7,35 +7,16 @@ import { useState } from "react";
 export default function MainApplication() {
   let [currentScore, setCurrentScore] = useState(0);
   let [bestScore, setBestScore] = useState(0);
-  let [card1Click, setCard1CLick] = useState(0);
-  let [card2Click, setCard2Click] = useState(0);
-  let [card3Click, setCard3Click] = useState(0);
-  let [card4Click, setCard4Click] = useState(0);
-  let [card5Click, setCard5Click] = useState(0);
-  let [card6Click, setCard6Click] = useState(0);
-  let [card7Click, setCard7Click] = useState(0);
-  let [card8Click, setCard8Click] = useState(0);
-  let [card9Click, setCard9Click] = useState(0);
-  let [card10Click, setCard10Click] = useState(0);
 
   let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   shuffle(array);
 
   return (
     <>
-      <WebsiteHeader />
+      <WebsiteHeader currentScore={currentScore} bestScore={bestScore} />
       <div className="mainApplication">
         <div className="card">
-          <CardImg
-            cardNo={array[0]}
-            onClick={() => {
-              if (card1Click == 0) {
-                setCard1CLick(1);
-                setCurrentScore(currentScore++);
-                if (currentScore >= bestScore) setBestScore(currentScore);
-              }
-            }}
-          />
+          <CardImg cardNo={array[0]} />
         </div>
         <div className="card">
           <CardImg cardNo={array[1]} />
