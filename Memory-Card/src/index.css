@@ -6,4 +6,5 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: 1.5fr 8fr 0.5fr;
+  zoom: 75%;
 }
