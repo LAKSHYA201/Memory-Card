@@ -1,14 +1,14 @@
-import { useState } from "react";
-export default function CardImg({ cardNo }) {
-  const [imgSrc, setImgSrc] = useState("");
-  async function imgFetcher(cardNo) {
-    await fetch(`https://akabab.github.io/starwars-api/api/id/${cardNo}.json`, {
-      mode: "cors",
-    })
-      .then((response) => response.json())
-      .then((data) => setImgSrc(data.image));
-  }
-  imgFetcher(cardNo);
-
-  return <img src={imgSrc} height="100%" width="100%" />;
+import "../styles/mainApplication.css";
+export default function Board({ cards, onClick }) {
+  return (
+    <main className="mainApplication">
+      {cards.map((card) => {
+        return (
+          <figure key={card.id} id={card.id} onClick={onClick} className="card">
+            <img src={card.src} height="100%" width="100%" />
+          </figure>
+        );
+      })}
+    </main>
+  );
 }
