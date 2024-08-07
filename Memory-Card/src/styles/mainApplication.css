@@ -6,6 +6,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  zoom: 75%;
 }
 .card {
   height: 30vh;
