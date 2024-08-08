@@ -42,7 +42,7 @@ const starCards = [
     id: uuidv4(),
   },
   {
-    src: "https://vignette.wikia.nocookie.net/starwars/images/c/c6/Greedo.jpg",
+    src: "https://vignette.wikia.nocookie.net/starwars/images/e/e2/TFAHanSolo.png",
     id: uuidv4(),
   },
   {
