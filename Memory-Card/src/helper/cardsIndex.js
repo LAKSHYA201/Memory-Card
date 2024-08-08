@@ -41,6 +41,14 @@ const starCards = [
     src: "https://vignette.wikia.nocookie.net/fr.starwars/images/3/32/Dark_Vador.jpg",
     id: uuidv4(),
   },
+  {
+    src: "https://vignette.wikia.nocookie.net/starwars/images/c/c6/Greedo.jpg",
+    id: uuidv4(),
+  },
+  {
+    src: "https://vignette.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png",
+    id: uuidv4(),
+  },
 ];
 
 export default starCards;
